@@ -19,6 +19,54 @@ This is a backend API for tracking and managing location data, routes, and user 
    npm start
    ```
 
+## Docker Setup
+
+### Using Docker
+
+1. Build the Docker image:
+   ```
+   docker build -t location-tracing-server .
+   ```
+
+2. Create a `.env` file with your environment variables:
+   ```
+   cp .env.example .env
+   ```
+   Then edit the `.env` file with your actual configuration.
+
+3. Run the container:
+   ```
+   docker run -p 3000:3000 --env-file .env location-tracing-server
+   ```
+
+### Using Docker Compose
+
+1. Create a `.env` file with your environment variables:
+   ```
+   cp .env.example .env
+   ```
+   Then edit the `.env` file with your actual configuration.
+
+2. Start the application and database:
+   ```
+   docker-compose up
+   ```
+
+3. To run in the background:
+   ```
+   docker-compose up -d
+   ```
+
+4. To stop the services:
+   ```
+   docker-compose down
+   ```
+
+5. To rebuild the image after making changes:
+   ```
+   docker-compose build
+   ```
+
 ## Testing the Backend
 
 There are several ways to test the backend:
